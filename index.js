@@ -10,9 +10,19 @@ class SortedList {
     this.length = this.items.length;
   }
 
-  get(pos) {}
+  get(pos) {
+    if (!this.items[pos]) {
+      throw new Error("OutOfBounds");
+    }
+    return this.items[pos];
+  }
 
-  max() {}
+  max() {
+    if (!this.length) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.max(...this.items); // Separa cada nº del array y los va ordenando
+  }
 
   min() {}
 
