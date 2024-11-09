@@ -24,7 +24,12 @@ class SortedList {
     return Math.max(...this.items); // Separa cada nº del array y los va ordenando
   }
 
-  min() {}
+  min() {
+    if (!this.length) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.min(...this.items); // Separa cada nº del array y los va ordenando
+  }
 
   sum() {}
 
