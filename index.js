@@ -31,7 +31,12 @@ class SortedList {
     return Math.min(...this.items); // Separa cada nº del array y los va ordenando
   }
 
-  sum() {}
+  sum() {
+    if (!this.length) {
+      return 0;
+    }
+    return this.items.reduce((aux, current) => aux + current)
+  }
 
   avg() {}
 }
